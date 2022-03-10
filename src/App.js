@@ -1,4 +1,5 @@
 import './App.css';
+import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     //This will called when we clicked the button
     event.preventDefault();
     setTodos([...todos, input]);
+    // Clear the input after hitting submit button or enter key
     setInput('');
   }
 
@@ -18,7 +20,7 @@ function App() {
       <h1>Hello from todo-list app</h1>
       <form>
         <input value={input} onChange={event => setInput(event.target.value)} />
-        <button type="submit" onClick={addTodo}>Add Todo</button>
+        <Button type="submit" onClick={addTodo} variant="contained" color="secondary">Add-Todo</Button>
       </form>
 
 
