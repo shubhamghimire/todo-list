@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App">
       <h1>Hello from todo-list app</h1>
       <form>
         <FormControl>
